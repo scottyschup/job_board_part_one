@@ -1,1 +1,6 @@
 <h1>Avant Open Jobs</h1>
+<% @jobs.each do |job| %>
+  <h3><%= job.title %></h3>
+  <p><%= job.description %></p>
+  <h5><%= link_to 'Delete Posting', job, method: :delete %></h5>
+<% end %>
